@@ -1,0 +1,21 @@
+[Unit]
+Description=FastAPI Music Downloader Service
+After=network.target
+
+[Service]
+# User who owns the project and should run the script (replace 'unitron' with your actual username)
+User=unitron
+# Working directory where the script and venv are located
+WorkingDirectory=/home/unitron/music_Downloader/
+
+# The command to execute: 
+# It activates the venv's python interpreter to run your main.py.
+# We use the full path to the venv python interpreter.
+ExecStart=/home/unitron/music_Downloader/venv/bin/python3 /home/unitron/music_Downloader/main.py
+
+# Restart the service automatically if it crashes
+Restart=always
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
