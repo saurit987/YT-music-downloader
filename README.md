@@ -1,8 +1,10 @@
-# YT Music Downloader
+# YT Music & Video Downloader
 
 A small FastAPI web app that downloads audio from YouTube links (single songs or
 playlists) and serves them as 192 kbps MP3s with proper ID3 metadata and
-embedded cover art.
+embedded cover art also there's option to download Hi-res version of that audio. 
+
+Now along with audio files, you can download videos as well. 
 
 Designed for deployment on a **remote server**: every download is fetched,
 tagged, and **streamed straight back to the requesting browser**. Nothing is
